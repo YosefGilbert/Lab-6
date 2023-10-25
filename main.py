@@ -3,7 +3,7 @@ def encode(pass_str):
     str_a = ''
     list_a = list(pass_str)
     for element in list_a:
-        str_a = str_a + str(int(element) + 3)
+        str_a = str_a + str(int(element) + 3)[-1]
     return str_a
 
 
