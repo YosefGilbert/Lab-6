@@ -7,6 +7,13 @@ def encode(pass_str):
     return str_a
 
 
+def decode(password):
+    str_b = ''
+    for x in password:
+        str_b += str(int(x)+7)[-1]
+    return str_b
+
+
 def main():
     menu_num = 'not three!'
     while menu_num != 3:
@@ -23,7 +30,7 @@ def main():
             print('Your password has been encoded and stored!')
             print()
         elif menu_num == 2:
-            print(f'The encoded password is {encoded_str}, and the original password is {pass_str}.')
+            print(f'The encoded password is {encoded_str}, and the original password is {decode(encoded_str)}.')
             print()
 
 
